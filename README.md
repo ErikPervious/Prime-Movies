@@ -1,2 +1,2 @@
 # react-movies
-App de filmes desenvolvido no insider 4.0.
+Olá, eu já estou desenvolvendo o README!
