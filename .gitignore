@@ -1,4 +1,5 @@
 node_modules/
+src/utils/key.js
 .expo/
 npm-debug.*
 *.jks

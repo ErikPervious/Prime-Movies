@@ -7,7 +7,8 @@ import {
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
-import api, { KEY } from '../../services/api';
+import api from '../../services/api';
+import { KEY_SECRET } from '../../utils/key';
 import { getListMovies, randomBanner } from '../../utils/movie';
 
 import { Header } from '../../components/Header';
@@ -49,21 +50,21 @@ export function Home() {
       const [nowData, popularData, topData] = await Promise.all([
         api.get('/movie/now_playing', {
           params: {
-            api_key: KEY,
+            api_key: KEY_SECRET,
             language: 'pt-BR',
             page: 1
           }
         }),
         api.get('/movie/popular', {
           params: {
-            api_key: KEY,
+            api_key: KEY_SECRET,
             language: 'pt-BR',
             page: 1
           }
         }),
         api.get('/movie/top_rated', {
           params: {
-            api_key: KEY,
+            api_key: KEY_SECRET,
             language: 'pt-BR',
             page: 1
           }

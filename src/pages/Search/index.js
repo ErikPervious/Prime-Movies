@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { ActivityIndicator, StatusBar } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 
-import api, { KEY } from '../../services/api';
+import api from '../../services/api';
+import { KEY_SECRET } from '../../utils/key';
 
 import {
   Container,
@@ -31,7 +32,7 @@ export function Search() {
       const response = await api.get('/search/movie', {
         params: {
           query: route.params?.input,
-          api_key: KEY,
+          api_key: KEY_SECRET,
           language: 'pt-BR',
           page: 1
         }

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { ScrollView, Modal, ActivityIndicator, Share } from 'react-native';
 import { Feather, Ionicons, AntDesign } from '@expo/vector-icons';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import api, { KEY } from '../../services/api';
+import api from '../../services/api'
+import { KEY_SECRET } from '../../utils/key';
 
 import { 
   Container, 
@@ -71,7 +72,7 @@ export function Detail() {
     async function getMovie() {
       const response = await api.get(`/movie/${route.params?.id}`, {
         params: {
-          api_key: KEY,
+          api_key: KEY_SECRET,
           language: 'pt-BR'
         }
       })
