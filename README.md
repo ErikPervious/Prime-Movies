@@ -41,8 +41,8 @@ $ git clone https://github.com/ErikPervious/react-movies.git
 $ cd react-movies
 
 # Pegue a sua key no https://developers.themoviedb.org e a exporte
-# dentro do arquivo /src/services/api
-$ export const KEY = "sua key"
+# dentro da pasta src/utils/key.js
+$ export const KEY_SECRET = "sua key"
 
 # Instale o projeto na sua máquina
 $ yarn install
